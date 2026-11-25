@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ===== META & SEO ===== -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ff218d">
+  <meta name="description" content="Sweet Deli Dan – Homemade Kakanin & Desserts in Daet, Camarines Norte. Order bilao sets, trays, and bundles for your celebration.">
+  <meta property="og:title" content="Sweet Deli Dan – Homemade Kakanin & Desserts">
+  <meta property="og:description" content="Grace before Grind. Fresh kakanin, desserts, and food bilao bundles.">
+  <meta property="og:image" content="images/hero.jpg">
+  <title>Sweet Deli Dan – Homemade Kakanin & Desserts</title>
+
+  <!-- ===== FONTS & ICONS ===== -->
+  <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&family=Montserrat:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- ===== STYLESHEET ===== -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- ===== SCRIPTS (deferred so DOM is ready) ===== -->
+  <script defer src="js/data.js"></script>
+  <script defer src="js/app.js"></script>
+  <script defer src="js/modal.js"></script>
+  <script defer src="js/cart.js"></script>
+</head>
+<body>
+  <!-- ===== HEADER (injected by app.js) ===== -->
+  <div id="header"></div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+    <!-- ===== PAGE: HOME ===== -->
+    <div data-page="home">
+      <section class="hero">
+        <div>
+          <h1>Sweet Deli Dan</h1>
+          <h2>Homemade Kakanin<br>&amp; Desserts</h2>
+          <p class="script" style="font-size:1.6rem;font-weight:700;color:var(--pink)">"Grace before Grind"</p>
+          <br>
+          <a class="btn" href="#menu">View Menu</a>
+        </div>
+        <div class="hero-img" id="heroSlot"></div>
+      </section>
+
+      <h2 class="title">Best Seller</h2>
+      <section class="carousel" aria-label="Best sellers">
+        <button class="arrow" id="prev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="slide" id="slide"></div>
+        <button class="arrow" id="next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+      </section>
+      <div id="dots"></div>
+    </div>
+
+    <!-- ===== PAGE: MENU ===== -->
+    <div data-page="menu" hidden>
+      <h1>OUR MENU</h1>
+      <div class="tabs" id="tabs"></div>
+      <section class="grid" id="menuGrid"></section>
+    </div>
+
+    <!-- ===== PAGE: CONTACT ===== -->
+    <div data-page="contact" hidden>
+      <h1>Contact Us</h1>
+      <p>Make your celebration stress free with us!<br>Message us for kakanin, desserts and Bilao Bundle orders.</p>
+      <section class="panel">
+        <div class="row"><b><i class="fa-brands fa-facebook" style="color:#1877f2"></i>Facebook</b><a class="btn sm" id="fb" target="_blank" rel="noopener">Visit Page <i class="fa-solid fa-arrow-right"></i></a></div>
+        <div class="row"><b><i class="fa-brands fa-tiktok"></i>TikTok</b><a class="btn sm" id="tt" target="_blank" rel="noopener">Visit Profile <i class="fa-solid fa-arrow-right"></i></a></div>
+        <div class="row"><b><i class="fa-solid fa-envelope" style="color:#ea4335"></i>Gmail</b><a class="btn sm" id="em">Send Email <i class="fa-solid fa-arrow-right"></i></a></div>
+        <div class="row"><b><i class="fa-brands fa-facebook-messenger" style="color:#0084ff"></i>Messenger</b><a class="btn sm" id="ms" target="_blank" rel="noopener">Message Us <i class="fa-solid fa-arrow-right"></i></a></div>
+        <p class="script" style="font-size:2rem;color:var(--pink);margin-top:20px">Let's plan your celebration!</p>
+      </section>
+    </div>
+
+    <!-- ===== PAGE: ABOUT ===== -->
+    <div data-page="about" hidden>
+      <h2>About Us</h2>
+      <h1>Welcome To Sweet Deli Dan!</h1>
+      <p style="margin:12px 0">A homegrown Daet business, built from a small online start in 2020 into a store our community can visit.</p>
+      <section class="panel">
+        <p>Sweet Deli Dan was founded in 2020 by Danica Joy Asis. What began as an online business has grown steadily over six years, thanks to the trust and support of our loyal customers. In the past eight months, we opened our physical store in Daet, Camarines Norte, so that we can serve you in person.</p>
+      </section>
+      <section class="two">
+        <div class="panel"><h2><i class="fa-solid fa-bullseye"></i> Our Mission</h2><p>To provide delicious, fresh, and affordable treats that bring happiness and satisfaction to every customer.</p></div>
+        <div class="panel"><h2><i class="fa-solid fa-eye"></i> Our Vision</h2><p>To become a trusted and well-loved food business known for quality homemade treats, excellent service, and memorable celebrations.</p></div>
+      </section>
+      <section class="panel">
+        <p><i class="fa-solid fa-location-dot" style="color:var(--red)"></i> We are located at Governor Panotes Avenue, Barangay 8, Daet, Camarines Norte</p>
+        <br>
+        <iframe title="Map of Sweet Deli Dan" width="100%" height="320" style="border:0;border-radius:20px" loading="lazy" src="https://www.google.com/maps?q=Governor+Panotes+Avenue+Daet+Camarines+Norte&output=embed"></iframe>
+      </section>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER (injected by app.js) ===== -->
+  <div id="footer"></div>
+
+  <!-- ===== DETAILS POP-UP (View Details) ===== -->
+  <div id="modal" class="overlay" hidden>
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+      <button class="x" id="closeModal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ===== FULL PHOTO VIEWER ===== -->
+  <div id="lightbox" class="overlay dark" hidden>
+    <button class="x" id="closeLightbox" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <figure>
+      <img id="lbImg" alt="">
+      <div id="lbMissing" hidden><i class="fa-solid fa-image"></i><p>Photo coming soon</p></div>
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+  </div>
+
+  <!-- ===== NOSCRIPT FALLBACK ===== -->
+  <noscript style="display:block;padding:20px;text-align:center;background:#fff3cd;color:#856404">
+    Please enable JavaScript to use the menu, cart, and ordering features.
+  </noscript>
+</body>
+</html>
